@@ -34,6 +34,9 @@ WebPage::WebPage(WebPageManager *manager, QObject *parent) : QWebPage(parent) {
       this, SLOT(handleUnsupportedContent(QNetworkReply*)));
   resetWindowSize();
 
+//  settings()->setAttribute(QWebSettings::AutoLoadImages, true);
+  settings()->setAttribute(QWebSettings::PluginsEnabled, true);
+
   settings()->setAttribute(QWebSettings::JavascriptCanOpenWindows, true);
 }
 
